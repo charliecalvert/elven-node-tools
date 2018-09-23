@@ -7,13 +7,5 @@ if [[ -z $1 ]]; then
     exit 1
 fi
 
-if [[ -z $2 ]]; then
-    echo -e "You must pass in your service file name"
-    echo -e "for instance:"
-    echo -e "  ./modService bcuser eip.service"
-    exit 1
-fi
-
-
 sed -i "s/home\/\([^/]*\)/home\/$1/g" $2
 sed "s/SERVICE_FILE/$SERVICE_FILE/g" setup-service start-service
