@@ -1,0 +1,3 @@
+#! /bin/bash
+
+export $SERVICE_FILE=eip.service

@@ -1,4 +1,6 @@
-# node-tools.elvenware.com
+# Elven systemd Tools
+
+No matter how simple the commands, it is almost always worth taking a moment to create some bash scripts to automate the process. Here are three and half scripts that I find useful. They take a moment to setup, but they are very useful.
 
 ### modify-service-directory
 
@@ -14,8 +16,19 @@ if [[ -z $1 ]]; then
     exit 1
 fi
 
-sed -i "s/home\/\([^/]*\)/home\/$1/g" eip.service
+if [[ -z $2 ]]; then
+    echo -e "You must pass in your service file name"
+    echo -e "for instance:"
+    echo -e "  ./modService bcuser eip.service"
+    exit 1
+fi
+
+
+sed -i "s/home\/\([^/]*\)/home\/$1/g" $2
 ```
+
+Modify the script to reference your service file.
+
 
 ### setup-service
 
@@ -27,11 +40,11 @@ This script calls **mod-service**. If that call succeeds, it sets up your servic
 function copyService() {
     ln -s $HOME/Git/writings/Tech/Markdown/ElvenImagePicker $HOME/bin/eip
     sudo cp -v eip.service /etc/systemd/system/.
-    sudo systemctl enable eip.service
-    sudo systemctl start eip.service
+    sudo systemctl enable SERVICE_FILE
+    sudo systemctl start SERVICE_FILE
 }
 
-./mod-service $1 && copyService
+./mod-service $1 $2 && copyService
 ```
 
 Once you have set up your service, you can use these scripts to enable and start the service, or stop and disable the service.
