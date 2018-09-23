@@ -1,0 +1,4 @@
+#! /bin/bash
+
+sudo systemctl stop eip.service
+sudo systemctl disable eip.service

@@ -1,0 +1,10 @@
+#! /bin/bash
+
+if [[ -z $1 ]]; then
+    echo -e "You must pass in your home directory"
+    echo -e "for instance:"
+    echo -e "  ./modService bcuser"
+    exit 1
+fi
+
+sed -i "s/home\/\([^/]*\)/home\/$1/g" eip.service
