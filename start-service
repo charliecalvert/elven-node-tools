@@ -1,4 +1,4 @@
 #! /bin/bash
 
-sudo systemctl enable eip.service
-sudo systemctl start eip.service
+sudo systemctl enable SERVICE_FILE
+sudo systemctl start SERVICE_FILE
