@@ -11,6 +11,6 @@ function testInput() {
 
 sed -i "s/home\/\([^/]*\)/home\/$USER/g" $SERVICE_FILE
 sed -i "s/SERVICE_FILE/$SERVICE_FILE/g" setup-service start-service stop-service
-sed -i "s/DESCRIPTION/$DESCRIPTION_FILE/g" $SERVICE_FILE
+sed -i "s/DESCRIPTION/$DESCRIPTION/g" $SERVICE_FILE
 sed -i "s/User\=\([^/]*\)/User\=$USER/g" $SERVICE_FILE
 sed -i "s/Group\=\([^/]*\)/Group\=$USER/g" $SERVICE_FILE
