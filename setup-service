@@ -2,9 +2,9 @@
 
 function copyService() {
     ln -s $HOME/Git/writings/Tech/Markdown/ElvenImagePicker $HOME/bin/eip
-    sudo cp -v eip.service /etc/systemd/system/.
-    sudo systemctl enable eip.service
-    sudo systemctl start eip.service
+    sudo cp -v SERVICE_FILE /etc/systemd/system/.
+    sudo systemctl enable SERVICE_FILE
+    sudo systemctl start SERVICE_FILE
 }
 
 ./mod-service $1 && copyService

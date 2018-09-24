@@ -1,15 +1,15 @@
 [Unit]
-Description=Run ElvenImagePicker
+Description=DESCRIPTION
 
 [Service]
-ExecStart=/home/charlie/npm/bin/npm run start-service
-WorkingDirectory=/home/charlie/bin/eip
+ExecStart=/home/bcuser/npm/bin/npm run start-service
+WorkingDirectory=/home/bcuser/bin/eip
 Restart=always
 StandardOutput=syslog
 StandardError=syslog
 SyslogIdentifier=eip
-User=charlie
-Group=charlie
+User=bcuser
+Group=bcuser
 Environment=NODE_ENV=production
 Environment=PORT=30200
 
