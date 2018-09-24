@@ -1,0 +1,17 @@
+[Unit]
+Description=DESCRIPTION
+
+[Service]
+ExecStart=/home/bcuser/npm/bin/npm run start-service
+WorkingDirectory=/home/bcuser/bin/eip
+Restart=always
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=eip
+User=bcuser
+Group=bcuser
+Environment=NODE_ENV=production
+Environment=PORT=30200
+
+[Install]
+WantedBy=multi-user.target
