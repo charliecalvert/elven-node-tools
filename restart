@@ -1,1 +1,1 @@
-git checkout setup-service start-service stop-service
+git checkout setup-service start-service stop-service eip.service
