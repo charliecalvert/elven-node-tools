@@ -12,9 +12,13 @@ Modify the script to reference your service file.
 
 Run the JsObjects script called **get-gist** from the root of your project. Choose **Elven Node Tools**. Exit the script. A bunch of files should have been copied into your project.
 
-Rename **eip.service** to the name of your service. For instance:
+In **package.json** create script called **start-service** that will start your service without relying on **nodemon** or other problematic services. The minimal possible entry would be:
 
-    mv eip.service my-project.service
+    "start-service": "npm start",
+
+Or maybe:
+
+    "start-service": "node bin/www",
 
 In **setup-environment-service** modify these lines:
 
