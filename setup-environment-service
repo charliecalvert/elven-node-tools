@@ -1,4 +1,24 @@
 #! /bin/bash
 
-export SERVICE_FILE=eip.service
-export DESCRIPTION="Run ElvenImagePicker"
+RED='\033[0;31m'
+LIGHT_RED='\033[1;31m'
+LIGHT_GREEN='\033[1;32m'
+YELLOW='\033[1;33m'
+BLUE='\033[1;36m'
+NC='\033[0m' # No Color
+
+
+# You must define the following environment variables.
+# Then run: source setup-environment-service
+
+export SYSTEMD_PROJECT_NAME=react-basics
+export SERVICE_FILE=$SYSTEMD_PROJECT_NAME.service
+export DESCRIPTION="Run React Basics"
+
+echo you set the following environment variables
+
+echo -e "SYSTEMD_PROJECT_NAME is set to: $BLUE$SYSTEMD_PROJECT_NAME$NC"
+echo -e "SERVICE FILE is set to $BLUE$SERVICE_FILE$NC"
+echo -e "DESCRIPTION is set to $BLUE$DESCRIPTION$NC"
+
+echo -e "If the above looks good, run ./mod-service"

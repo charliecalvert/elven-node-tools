@@ -1,7 +1,7 @@
 #! /bin/bash
 
 function copyService() {
-    ln -s $HOME/Git/writings/Tech/Markdown/ElvenImagePicker $HOME/bin/eip
+    #ln -s $HOME/Git/writings/Tech/Markdown/ElvenImagePicker $HOME/bin/eip
     sudo cp -v SERVICE_FILE /etc/systemd/system/.
     sudo systemctl enable SERVICE_FILE
     sudo systemctl start SERVICE_FILE

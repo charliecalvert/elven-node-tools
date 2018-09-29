@@ -3,11 +3,11 @@ Description=DESCRIPTION
 
 [Service]
 ExecStart=/home/bcuser/npm/bin/npm run start-service
-WorkingDirectory=/home/bcuser/bin/eip
+WorkingDirectory=/home/bcuser/bin/SYSTEMD_PROJECT_NAME
 Restart=always
 StandardOutput=syslog
 StandardError=syslog
-SyslogIdentifier=eip
+SyslogIdentifier=SYSTEMD_PROJECT_NAME
 User=bcuser
 Group=bcuser
 Environment=NODE_ENV=production
