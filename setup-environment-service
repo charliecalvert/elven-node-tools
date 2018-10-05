@@ -8,13 +8,14 @@ BLUE='\033[1;36m'
 NC='\033[0m' # No Color
 
 
-# You must define the following environment variables.
+# You must define the following two environment variables.
 # Then run: source setup-environment-service
-
-echo "You set the following environment variables:
 export SYSTEMD_PROJECT_NAME=eip
-export SERVICE_FILE=$SYSTEMD_PROJECT_NAME.service
 export DESCRIPTION="Run Elven Code"
+
+# This export does not need to be edited. It is derived from the lines above.
+export SERVICE_FILE=$SYSTEMD_PROJECT_NAME.service
+
 
 echo "You set the following environment variables"
 

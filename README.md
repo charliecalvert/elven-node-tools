@@ -12,13 +12,23 @@ Modify the script to reference your service file.
 
 Run the JsObjects script called **get-gist** from the root of your project. Choose **Elven Node Tools**. Exit the script. A bunch of files should have been copied into your project.
 
-In **package.json** create script called **start-service** that will start your service without relying on **nodemon** or other problematic services. The minimal possible entry would be:
+In **package.json** create a key value pair in the **Scripts** section called **start-service** that will start your service without relying on **nodemon** or other problematic services. The minimal possible entry would be:
 
     "start-service": "npm start",
 
 Or maybe:
 
     "start-service": "node bin/www",
+
+For instance:
+
+```
+"scripts": {
+  "start": "nodemon ./bin/www",
+  "start-service": "node bin/www",
+  "build": "node_modules/.bin/webpack"
+},    
+```
 
 In **setup-environment-service** modify these lines:
 
@@ -38,6 +48,8 @@ Run **setup-service**:
     ./setup-service
 
 Your project might now be running as a service.
+
+That's all you need to do. The sections below are provided as a reference.
 
 ## setup-service
 
