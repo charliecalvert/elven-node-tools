@@ -19,6 +19,8 @@ In **setup-environment-service** modify these lines:
 For instance:
 
     export SYSTEMD_PROJECT_NAME=my-project
+    export SYSTEMD_DESCRIPTION="My Project Service"
+    export SYSTEMD_PORT="SERVER_PORT=30027"
 
 Now run:
 
