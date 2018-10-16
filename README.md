@@ -2,6 +2,14 @@
 
 No matter how simple the commands, it is almost always worth taking a moment to create some bash scripts to automate the process. Here are three and half scripts that I find useful. They take a moment to setup, but they are very useful.
 
+It:
+
+- creates a service file
+- modifies package.json to insert a start-service property
+- sets the port you will run on
+- starts the service
+- checks if the service is really running
+
 ## modify-service-directory
 
 This script can change the name of the directory in your service file. For instance, if you want to change references to **bcuser** to reference **ubuntu** then use these scripts. 
