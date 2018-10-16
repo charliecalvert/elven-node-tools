@@ -30,4 +30,5 @@ sed -i "s/SYSTEMD_DESCRIPTION/$SYSTEMD_DESCRIPTION/g" $SERVICE_FILE
 sed -i "s/SYSTEMD_PORT/$SYSTEMD_PORT/g" $SERVICE_FILE
 sed -i "s/User\=\([^/]*\)/User\=$USER/g" $SERVICE_FILE
 sed -i "s/Group\=\([^/]*\)/Group\=$USER/g" $SERVICE_FILE
+npm install --save elven-code
 node edit-package-json.js
