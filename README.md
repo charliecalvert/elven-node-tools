@@ -24,7 +24,7 @@ Now run:
 
     ./run-setup-service
     
-That's all you need to do. Your project should now be running as a system service. 
+That's all you need to do. Your project should now be running as a system service. Try to access it on the port you sepecified in **setup-environment-service**.
 
 The sections below are provided as a reference. You don't need to do anything else.
 
