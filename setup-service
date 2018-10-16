@@ -6,4 +6,4 @@ function copyService() {
     sudo systemctl start SERVICE_FILE
 }
 
-./mod-service $1 && copyService
+copyService

@@ -10,8 +10,9 @@ NC='\033[0m' # No Color
 
 # You must define the following two environment variables.
 # Then run: source setup-environment-service
-export SYSTEMD_PROJECT_NAME=eip
-export DESCRIPTION="Run Elven Code"
+export SYSTEMD_PROJECT_NAME=<PROJECT NAME - OFTEN A THREE LETTER ACRONYM: nrb>
+export SYSTEMD_DESCRIPTION="<PROJECT DESCRIPTION>"
+export SYSTEMD_PORT="<PORT>"
 
 # This export does not need to be edited. It is derived from the lines above.
 export SERVICE_FILE=$SYSTEMD_PROJECT_NAME.service
@@ -21,7 +22,7 @@ echo "You set the following environment variables"
 
 echo -e "SYSTEMD_PROJECT_NAME is set to: $BLUE$SYSTEMD_PROJECT_NAME$NC"
 echo -e "SERVICE FILE is set to $BLUE$SERVICE_FILE$NC"
-echo -e "DESCRIPTION is set to $BLUE$DESCRIPTION$NC"
+echo -e "DESCRIPTION is set to $BLUE$SYSTEMD_DESCRIPTION$NC"
 
 echo -e "Renaming$YELLOW eip.service$NC to $YELLOW$SYSTEMD_PROJECT_NAME.service"$NC
 

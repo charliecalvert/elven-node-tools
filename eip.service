@@ -1,5 +1,5 @@
 [Unit]
-Description=DESCRIPTION
+Description=SYSTEMD_DESCRIPTION
 
 [Service]
 ExecStart=/home/bcuser/npm/bin/npm run start-service
@@ -11,7 +11,7 @@ SyslogIdentifier=SYSTEMD_PROJECT_NAME
 User=bcuser
 Group=bcuser
 Environment=NODE_ENV=production
-Environment=PORT=30200
+Environment=PORT=SYSTEMD_PORT
 
 [Install]
 WantedBy=multi-user.target
