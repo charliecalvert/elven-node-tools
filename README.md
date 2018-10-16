@@ -12,9 +12,9 @@ Run the JsObjects script called **get-gist** from the root of your project. Choo
 
 In **setup-environment-service** modify these lines:
 
-export SYSTEMD_PROJECT_NAME=temp
-export SYSTEMD_DESCRIPTION="Temp Service"
-export SYSTEMD_PORT="SERVER_PORT=30026"
+    export SYSTEMD_PROJECT_NAME=temp
+    export SYSTEMD_DESCRIPTION="Temp Service"
+    export SYSTEMD_PORT="SERVER_PORT=30026"
 
 For instance:
 
