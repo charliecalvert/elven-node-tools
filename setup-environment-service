@@ -12,7 +12,7 @@ NC='\033[0m' # No Color
 # Then run: source setup-environment-service
 export SYSTEMD_PROJECT_NAME=<PROJECT NAME - OFTEN A THREE LETTER ACRONYM: nrb>
 export SYSTEMD_DESCRIPTION="<PROJECT DESCRIPTION>"
-export SYSTEMD_PORT="<PORT>"
+export SYSTEMD_PORT="<SERVER_PORT=PORT>"
 
 # This export does not need to be edited. It is derived from the lines above.
 export SERVICE_FILE=$SYSTEMD_PROJECT_NAME.service
@@ -28,4 +28,4 @@ echo -e "Renaming$YELLOW temp.service$NC to $YELLOW$SYSTEMD_PROJECT_NAME.service
 
 mv temp.service $SYSTEMD_PROJECT_NAME.service
 
-echo -e "If the above looks good, run ./setup-service"
+echo -e "If the above looks good, run ./mod-service"
