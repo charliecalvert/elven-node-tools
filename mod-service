@@ -25,7 +25,7 @@ setupSymbolicLink
 # Modify scripts so they are cusomized for our project.
 sed -i "s/home\/\([^/]*\)/home\/$USER/g" $SERVICE_FILE
 sed -i "s/SYSTEMD_PROJECT_NAME/$SYSTEMD_PROJECT_NAME/g" $SERVICE_FILE
-sed -i "s/SERVICE_FILE/$SERVICE_FILE/g" setup-service start-service stop-service
+sed -i "s/SERVICE_FILE/$SERVICE_FILE/g" setup-service start-service stop-service check-service
 sed -i "s/SYSTEMD_DESCRIPTION/$SYSTEMD_DESCRIPTION/g" $SERVICE_FILE
 sed -i "s/SYSTEMD_PORT/$SYSTEMD_PORT/g" $SERVICE_FILE
 sed -i "s/User\=\([^/]*\)/User\=$USER/g" $SERVICE_FILE
